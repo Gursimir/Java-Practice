@@ -11,12 +11,12 @@ public class Solution {
         double payment = scanner.nextDouble();
         scanner.close();
 
-        Locale INDIA = new Locale("en","IN");
+         Locale INDIA = new Locale("en","in");
 
         String us = NumberFormat.getCurrencyInstance(Locale.US).format(payment);
-        String india = NumberFormat.getCurrencyInstance(Locale.IN);
-        NumberFormat china = NumberFormat.getCurrencyInstance(Locale.CHINA);
-        NumberFormat france = NumberFormat.getCurrencyInstance(Locale.FRANCE);
+        String india = NumberFormat.getCurrencyInstance(INDIA).format(payment);
+        String china = NumberFormat.getCurrencyInstance(Locale.CHINA).format(payment);
+        String france = NumberFormat.getCurrencyInstance(Locale.FRANCE).format(payment);
 
         
         System.out.println("US: " + us);
