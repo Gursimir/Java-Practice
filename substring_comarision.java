@@ -8,21 +8,17 @@ public class subset_comparicion {
         String smallest = "";
         String largest = "";
         
-/* finding all the possible substrings of the string 's' with length 'k' and storing them into the vector 'str' we can also use ArrayList too */
-        Vector<String> str = new Vector<String>();
-    
-        for (int i=0;i<s.length();i++){
-            for(int j=1;j<s.length();j++){
-                if(s.substring(i, j).length() == k){
-                    str.add(s.substring(i, j));
-                }
+         smallest = s.substring(0, k);
+        largest = s.substring(0, k);
+
+        String str;
+        for(int i=0 ; i<=s.length()-k ; i++){
+            str = s.substring(i,i+k);
+            if(str.compareTo(smallest)<0){
+                smallest = str;
             }
-        }
-        int result;
-        for (int i=0;i<str.size();i++){
-            for(int j=1;j<str.size();j++){
-                result = str.get(i).compareTo(str.get(j));
-                
+         if(str.compareTo(largest)>0){
+                largest = str;
             }
         }
 
