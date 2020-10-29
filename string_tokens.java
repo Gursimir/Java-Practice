@@ -7,10 +7,11 @@ public class Solution {
         Scanner scan = new Scanner(System.in);
         String s = scan.nextLine();
         
-         String[] str = s.split(" ");
+         String regex = "[ !,?._'@]+";
+        String[] str = s.split(regex);
         int l = str.length;
 
-        System.out.println("l");
+        System.out.println(l);
         for(int i=0;i<l;i++){
             System.out.println(str[i]);
         }
