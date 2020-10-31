@@ -8,7 +8,8 @@ public class Solution {
         String s = scan.nextLine();
         
          String regex = "[ !,?._'@]+";
-        String[] str = s.split(regex);
+         String[] str = s.trim().split(regex);
+
         int l = str.length;
 
         System.out.println(l);
