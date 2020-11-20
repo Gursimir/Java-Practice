@@ -1,10 +1,6 @@
-import java.io.*;
 import java.util.*;
-import java.text.*;
-import java.math.*;
-import java.util.regex.*;
 
-public class Solution {
+public class static_initialization {
  
 static Scanner scan = new Scanner(System.in);
     static int B = scan.nextInt(),H = scan.nextInt();
@@ -28,7 +24,6 @@ public static void main(String[] args){
 			System.out.print(area);
 		}
 		
-	}//end of main
-
-}//end of class
+	}
+}
 
