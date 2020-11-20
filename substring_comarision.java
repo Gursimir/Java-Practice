@@ -1,8 +1,6 @@
-import java.util.ArrayList;
 import java.util.Scanner;
-import java.util.Vector;
 
-public class subset_comparicion {
+public class substring_comarision {
 
     public static String getSmallestAndLargest(String s, int k) {
         String smallest = "";
