@@ -1,9 +1,7 @@
 import java.util.*;
-import java.io.*;
 
 
-
-class Solution{
+class dataType{
     public static void main(String []argh)
     {
         Scanner sc = new Scanner(System.in);
@@ -41,6 +39,7 @@ class Solution{
             }
 
         }
+        sc.close();
     }
 }
 
