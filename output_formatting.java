@@ -7,7 +7,7 @@ public class output_formatting {
         for(int i=0;i<3;i++){
             String s1=sc.next();
             int x=sc.nextInt();
-            
+            sc.close();
 /* "%-15s" means that within 15 blank space, the String "s1" will be filled in the left. (fill in the blanks from the left) "%03d" means that within 3 0s, the integer"x" will be filled in the right.(fill in the zeros from the right).
 
 This can only be done by using printf method.*/
