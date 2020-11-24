@@ -1,28 +1,26 @@
-import java.io.*;
-import java.util.*;
-import java.text.*;
-import java.math.*;
-import java.util.regex.*;
+import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
-public class tag_content_extractor {
-	public static void main(String[] args){
-		
-		Scanner in = new Scanner(System.in);
-		int testCases = Integer.parseInt(in.nextLine());
-		while(testCases>0){
-			String line = in.nextLine();
-            String tagMatch = "(<)";
-            if (line.matches(tagMatch)) {
-                System.out.println(s);
+public class tag_content_extractor{
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+        int testCases = Integer.parseInt(scan.nextLine());
+        
+        while (testCases-- > 0) {
+            String line = scan.nextLine();
+            
+            boolean matchFound = false;
+            Pattern r = Pattern.compile("<(.+)>([^<]+)</\\1>");
+            Matcher m = r.matcher(line);
+
+            while (m.find()) {
+                System.out.println(m.group(2));
+                matchFound = true;
             }
-            else{
+            if ( ! matchFound) {
                 System.out.println("None");
             }
-            testCases--;
-            in.close();
-		}
-	}
+        }
+    }
 }
-
-
-
