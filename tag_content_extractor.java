@@ -22,5 +22,6 @@ public class tag_content_extractor{
                 System.out.println("None");
             }
         }
+        scan.close();
     }
 }
